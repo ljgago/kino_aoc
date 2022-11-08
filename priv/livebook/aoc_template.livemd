@@ -1,0 +1,111 @@
+# Advent of Code - Day 01
+
+```elixir
+Mix.install([
+  {:kino_aoc, git: "https://github.com/ljgago/kino_aoc"}
+])
+```
+
+## Advent of Code Helper
+
+<!-- livebook:{"attrs":{"day":"1","session_secret":"AOC_SESSION","variable":"puzzle_input","year":"2021"},"kind":"Elixir.KinoAOC.HelperCell","livebook_object":"smart_cell"} -->
+
+```elixir
+{:ok, puzzle_input} = KinoAOC.download_puzzle("2021", "1", System.fetch_env!("LB_AOC_SESSION"))
+```
+
+<!-- livebook:{"branch_parent_index":0} -->
+
+## Part One
+
+-> Description Part One
+
+<!-- livebook:{"break_markdown":true} -->
+
+### Code
+
+```elixir
+defmodule PartOne do
+  def resolve(input) do
+    IO.puts("--- Part One ---")
+    IO.puts("Result: #{run(input)}")
+  end
+
+  def run(_input) do
+  end
+end
+```
+
+### Tests
+
+```elixir
+ExUnit.start(autorun: false)
+
+defmodule PartOneTest do
+  use ExUnit.Case, async: true
+  import PartOne
+
+  test "part one" do
+    input = nil
+    result = run(input)
+    assert result == nil
+  end
+end
+
+ExUnit.run()
+```
+
+### Solution
+
+```elixir
+PartOne.resolve(puzzle_input)
+```
+
+---
+
+<!-- livebook:{"branch_parent_index":0} -->
+
+## Part Two
+
+-> Description Part Two
+
+<!-- livebook:{"break_markdown":true} -->
+
+### Code
+
+```elixir
+defmodule PartTwo do
+  def resolve(input) do
+    IO.puts("--- Part Two ---")
+    IO.puts("Result: #{run(input)}")
+  end
+
+  def run(_input) do
+  end
+end
+```
+
+### Tests
+
+```elixir
+ExUnit.start(autorun: false)
+
+defmodule PartTwoTest do
+  use ExUnit.Case, async: true
+  import PartTwo
+
+  test "part two" do
+    input = nil
+    result = run(input)
+    assert result == nil
+  end
+end
+
+ExUnit.run()
+```
+
+### Solution
+
+```elixir
+PartTwo.resolve(puzzle_input)
+```
