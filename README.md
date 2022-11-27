@@ -1,6 +1,6 @@
 # KinoAOC
 
-Advent of Code Helper (smart cell) with [Kino](https://github.com/livebook-dev/kino) for [Livebook](https://github.com/livebook-dev/livebook).
+A helper for Advent of Code (a smart cell) for Elixir [Livebook](https://github.com/livebook-dev/livebook) using [Kino](https://github.com/livebook-dev/kino).
 
 ## Installation
 
