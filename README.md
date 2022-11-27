@@ -1,6 +1,6 @@
 # KinoAOC
 
-Advent of Code Helper integrations with [Kino](https://github.com/livebook-dev/kino) for [Livebook](https://github.com/livebook-dev/livebook).
+Advent of Code Helper (smart cell) with [Kino](https://github.com/livebook-dev/kino) for [Livebook](https://github.com/livebook-dev/livebook).
 
 ## Installation
 
