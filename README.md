@@ -9,8 +9,12 @@ To bring KinoAOC to Livebook all you need to do is `Mix.install/2`:
 ```elixir
 Mix.install([
   {:kino_aoc, git: "https://github.com/ljgago/kino_aoc"}
-])
+], force: true)
 ```
+
+`force: true` does not cache data and forces the module to be downloaded,
+without this, you must manually clear the cache to update and get the latest
+package changes.
 
 ## Use
 

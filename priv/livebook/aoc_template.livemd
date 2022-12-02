@@ -1,26 +1,59 @@
-# Advent of Code - Day 01
+# Advent of Code - Day XX
 
 ```elixir
-Mix.install([
-  {:kino_aoc, git: "https://github.com/ljgago/kino_aoc"}
-])
+Mix.install(
+  [
+    {:kino_aoc, git: "https://github.com/ljgago/kino_aoc"}
+  ],
+  force: true
+)
 ```
 
-## Advent of Code Helper
+## Introduction
 
-<!-- livebook:{"attrs":{"day":"1","session_secret":"AOC_SESSION","variable":"puzzle_input","year":"2021"},"kind":"Elixir.KinoAOC.HelperCell","livebook_object":"smart_cell"} -->
+--> Content
+
+## Parser
+
+<!-- livebook:{"attrs":{"day":"1","session_secret":"AOC_SESSION","variable":"puzzle_input","year":"2022"},"chunks":null,"kind":"Elixir.KinoAOC.HelperCell","livebook_object":"smart_cell"} -->
 
 ```elixir
-{:ok, puzzle_input} = KinoAOC.download_puzzle("2021", "1", System.fetch_env!("LB_AOC_SESSION"))
+{:ok, puzzle_input} = KinoAOC.download_puzzle("2022", "1", System.fetch_env!("LB_AOC_SESSION"))
 ```
 
-<!-- livebook:{"branch_parent_index":0} -->
+### Code
+
+```elixir
+defmodule Parser do
+  def parse(input) do
+  end
+end
+```
+
+### Tests
+
+```elixir
+ExUnit.start(autorun: false)
+
+defmodule ParserTest do
+  use ExUnit.Case, async: true
+  import Parser
+
+  @input ""
+  @expected nil
+
+  test "parse test" do
+    actual = parse(@input)
+    assert actual == @expected
+  end
+end
+
+ExUnit.run()
+```
+
+<!-- livebook:{"branch_parent_index":1} -->
 
 ## Part One
-
--> Description Part One
-
-<!-- livebook:{"break_markdown":true} -->
 
 ### Code
 
@@ -31,7 +64,7 @@ defmodule PartOne do
     IO.puts("Result: #{run(input)}")
   end
 
-  def run(_input) do
+  def run(input) do
   end
 end
 ```
@@ -45,10 +78,12 @@ defmodule PartOneTest do
   use ExUnit.Case, async: true
   import PartOne
 
+  @input ""
+  @expected nil
+
   test "part one" do
-    input = nil
-    result = run(input)
-    assert result == nil
+    actual = run(@input)
+    assert actual == @expected
   end
 end
 
@@ -61,9 +96,7 @@ ExUnit.run()
 PartOne.resolve(puzzle_input)
 ```
 
----
-
-<!-- livebook:{"branch_parent_index":0} -->
+<!-- livebook:{"branch_parent_index":1} -->
 
 ## Part Two
 
@@ -80,7 +113,7 @@ defmodule PartTwo do
     IO.puts("Result: #{run(input)}")
   end
 
-  def run(_input) do
+  def run(input) do
   end
 end
 ```
@@ -94,10 +127,12 @@ defmodule PartTwoTest do
   use ExUnit.Case, async: true
   import PartTwo
 
+  @input ""
+  @expected nil
+
   test "part two" do
-    input = nil
-    result = run(input)
-    assert result == nil
+    actual = run(@input)
+    assert actual == @expected
   end
 end
 

@@ -8,7 +8,7 @@ defmodule KinoAOC do
       )
 
     case res.status do
-      200 -> {:ok, res.body}
+      200 -> {:ok, String.trim(res.body)}
       _ -> raise "\nStatus: #{inspect(res.status)}\nError: #{inspect(res.body)}"
     end
   end
