@@ -100,10 +100,6 @@ PartOne.resolve(puzzle_input)
 
 ## Part Two
 
--> Description Part Two
-
-<!-- livebook:{"break_markdown":true} -->
-
 ### Code
 
 ```elixir
