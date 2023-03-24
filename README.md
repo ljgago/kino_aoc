@@ -16,7 +16,7 @@ Mix.install([
 without this, you must manually clear the cache to update and get the latest
 package changes.
 
-## Use
+## Usage
 
 You only need add the smart cell `Advent of Code Helper` and select the `YEAR`,
 `DAY`, set the `SESSION` and the output `ASSIGN TO`.

@@ -15,7 +15,7 @@ defmodule KinoAOC do
   without this, you must manually clear the cache to update and get the latest
   package changes.
 
-  ## Use
+  ## Usage
 
   You only need add the smart cell `Advent of Code Helper` and select the `YEAR`,
   `DAY`, set the `SESSION` and the output `ASSIGN TO`.
@@ -37,7 +37,7 @@ defmodule KinoAOC do
 
     case res.status do
       200 -> {:ok, String.slice(res.body, 0..-2)}
-      _ -> raise "\nStatus: #{inspect(res.status)}\nError: #{inspect(res.body)}"
+      _ -> raise "\nStatus: #{inspect(res.status)}\nError: #{inspect(String.trim(res.body))}"
     end
   end
 end
