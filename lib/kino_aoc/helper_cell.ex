@@ -14,7 +14,7 @@ defmodule KinoAOC.HelperCell do
       "year" => attrs["year"],
       "day" => attrs["day"],
       "session" => session,
-      "session_secret" => attrs["set_session"] || "",
+      "session_secret" => attrs["session_secret"] || "",
       "use_session_secret" => Map.has_key?(attrs, "session_secret") || session == ""
     }
 
