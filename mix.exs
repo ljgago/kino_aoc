@@ -7,7 +7,7 @@ defmodule KinoAOC.MixProject do
     [
       # Library
       app: :kino_aoc,
-      version: "0.1.3",
+      version: "0.1.4",
 
       # Elixir
       elixir: "~> 1.13",
