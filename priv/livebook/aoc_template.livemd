@@ -1,25 +1,25 @@
 # Advent of Code - Day XX
 
 ```elixir
-Mix.install(
-  [
-    {:kino_aoc, git: "https://github.com/ljgago/kino_aoc"}
-  ],
-  force: true
-)
+Mix.install([
+  {:kino_aoc, "~> 0.1.4"}
+])
 ```
 
 ## Introduction
 
 --> Content
 
-## Parser
+## Puzzle
 
 <!-- livebook:{"attrs":{"day":"1","session_secret":"AOC_SESSION","variable":"puzzle_input","year":"2022"},"chunks":null,"kind":"Elixir.KinoAOC.HelperCell","livebook_object":"smart_cell"} -->
 
 ```elixir
-{:ok, puzzle_input} = KinoAOC.download_puzzle("2022", "1", System.fetch_env!("LB_AOC_SESSION"))
+{:ok, puzzle_input} =
+  KinoAOC.download_puzzle("2022", "1", System.fetch_env!("LB_AOC_SESSION"))
 ```
+
+## Parser
 
 ### Code
 
@@ -51,7 +51,7 @@ end
 ExUnit.run()
 ```
 
-<!-- livebook:{"branch_parent_index":1} -->
+<!-- livebook:{"branch_parent_index":2} -->
 
 ## Part One
 
@@ -96,7 +96,7 @@ ExUnit.run()
 PartOne.resolve(puzzle_input)
 ```
 
-<!-- livebook:{"branch_parent_index":1} -->
+<!-- livebook:{"branch_parent_index":2} -->
 
 ## Part Two
 
