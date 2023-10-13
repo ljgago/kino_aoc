@@ -12,10 +12,6 @@ Mix.install([
 ])
 ```
 
-`force: true` does not cache data and forces the module to be downloaded,
-without this, you must manually clear the cache to update and get the latest
-package changes.
-
 ## Usage
 
 You only need add the smart cell `Advent of Code Helper` and select the `YEAR`,

@@ -28,7 +28,6 @@ button {
   border: solid 1px var(--gray-300);
   border-radius: 0.5rem;
   background-color: rgba(248, 250, 252, 0.3);
-  /* padding-bottom: 8px; */
 }
 
 .row {
@@ -57,11 +56,7 @@ button {
   justify-content: flex-start;
   background-color: var(--blue-100);
   padding: 16px;
-  /* padding: 8px 16px; */
-  /* margin-bottom: 12px; */
-  /* border-radius: 0.5rem 0.5rem 0 0; */
   border-radius: 0.5rem;
-  /* border-bottom: solid 1px var(--gray-200); */
   gap: 16px;
   height: 100%;
   min-height: 100%;
@@ -94,7 +89,7 @@ input[required].empty {
 
 .input:focus {
   outline: none;
-  border: 1px solid var(--gray-300);
+  /* border: 1px solid var(--gray-300); */
 }
 
 .input--sm {
@@ -115,7 +110,7 @@ input[required].empty {
   display: block;
   margin-bottom: 2px;
   font-size: 0.875rem;
-  color: var(--gray-800);
+  color: var(--gray-600);
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -145,6 +140,10 @@ input[required].empty {
   display: flex;
   flex-direction: row;
   align-items: baseline;
+}
+
+.required {
+  border: 1px solid var(--red-300);
 }
 
 .grow {
@@ -254,6 +253,20 @@ input::-webkit-inner-spin-button {
   padding: 8px 12px 8px 42px;
 }
 
+.input-icon-text {
+  border: 1px solid var(--gray-200);
+  outline: none;
+  padding: 8px 12px 8px 42px;
+}
+
+.input-icon.required {
+  border: 1px solid var(--red-300);
+}
+
+.input-icon-text.required {
+  border: 1px solid var(--red-300);
+}
+
 .input-icon:hover {
   cursor: pointer;
 }
@@ -268,7 +281,7 @@ input::-webkit-inner-spin-button {
 
 .icon-container {
   position: absolute;
-  top: 19px;
+  top: 20px;
   padding: 5px 6px;
   border-right: 1px solid var(--gray-200);
   width: 22px;
@@ -277,18 +290,12 @@ input::-webkit-inner-spin-button {
   border-radius: 0.5rem;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  /* margin-left: 1px; */
+  margin-left: 1px;
 }
 
 .icon-container:hover {
   cursor: pointer;
   background-color: var(--gray-300);
-}
-
-.input-icon-text {
-  border: 1px solid var(--gray-200);
-  outline: none;
-  padding: 8px 12px 8px 42px;
 }
 
 .hidden-checkbox:hover {
@@ -347,20 +354,4 @@ input::-webkit-inner-spin-button {
 
 .switch-button-checkbox:checked + .switch-button-bg {
   background-color: var(--blue-600);
-}
-
-/* Fix icon position - Safari 11+ */
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-    .icon-container {
-      top: 22px;
-    }
-  }
-}
-
-/* Fix icon border - Firefox */
-@-moz-document url-prefix() {
-  .icon-container {
-    height: 24px;
-  }
 }

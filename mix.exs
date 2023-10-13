@@ -7,7 +7,7 @@ defmodule KinoAOC.MixProject do
     [
       # Library
       app: :kino_aoc,
-      version: "0.1.4",
+      version: "0.1.5",
 
       # Elixir
       elixir: "~> 1.13",
@@ -33,9 +33,9 @@ defmodule KinoAOC.MixProject do
   defp deps do
     [
       {:kino, "~> 0.9"},
-      {:req, "~> 0.3"},
+      {:req, "~> 0.4"},
       # docs
-      {:ex_doc, "~> 0.29", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.30", only: :dev, runtime: false}
     ]
   end
 
