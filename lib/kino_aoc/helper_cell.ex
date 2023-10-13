@@ -10,9 +10,9 @@ defmodule KinoAOC.HelperCell do
     session = attrs["session"] || ""
 
     fields = %{
-      "variable" => Kino.SmartCell.prefixed_var_name("puzzle_input", attrs["variable"]),
-      "year" => attrs["year"],
-      "day" => attrs["day"],
+      "assign_to" => Kino.SmartCell.prefixed_var_name("puzzle_input", attrs["assign_to"]),
+      "year" => attrs["year"] || "",
+      "day" => attrs["day"] || "",
       "session" => session,
       "session_secret" => attrs["session_secret"] || "",
       "use_session_secret" => Map.has_key?(attrs, "session_secret") || session == ""
@@ -34,8 +34,8 @@ defmodule KinoAOC.HelperCell do
   def to_attrs(%{assigns: %{fields: fields}}) do
     fields_keys =
       if fields["use_session_secret"],
-        do: ~w|year day session_secret variable|,
-        else: ~w|year day session variable|
+        do: ~w|year day session_secret assign_to|,
+        else: ~w|year day session assign_to|
 
     Map.take(fields, fields_keys)
   end
@@ -43,7 +43,7 @@ defmodule KinoAOC.HelperCell do
   @impl true
   def to_source(attrs) do
     quote do
-      {:ok, unquote(quoted_var(attrs["variable"]))} =
+      {:ok, unquote(quoted_var(attrs["assign_to"]))} =
         KinoAOC.download_puzzle(
           unquote(attrs["year"]),
           unquote(attrs["day"]),
@@ -74,11 +74,11 @@ defmodule KinoAOC.HelperCell do
     {:noreply, ctx}
   end
 
-  defp to_updates(fields, "variable", value) do
+  defp to_updates(fields, "assign_to", value) do
     if Kino.SmartCell.valid_variable_name?(value) do
-      %{"variable" => value}
+      %{"assign_to" => value}
     else
-      %{"variable" => fields["variable"]}
+      %{"assign_to" => fields["assign_to"]}
     end
   end
 
