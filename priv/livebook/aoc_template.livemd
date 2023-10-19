@@ -2,7 +2,7 @@
 
 ```elixir
 Mix.install([
-  {:kino_aoc, "~> 0.1.4"}
+  {:kino_aoc, "~> 0.1"}
 ])
 ```
 
@@ -59,7 +59,7 @@ ExUnit.run()
 
 ```elixir
 defmodule PartOne do
-  def resolve(input) do
+  def solve(input) do
     IO.puts("--- Part One ---")
     IO.puts("Result: #{run(input)}")
   end
@@ -93,7 +93,7 @@ ExUnit.run()
 ### Solution
 
 ```elixir
-PartOne.resolve(puzzle_input)
+PartOne.solve(puzzle_input)
 ```
 
 <!-- livebook:{"branch_parent_index":2} -->
@@ -104,7 +104,7 @@ PartOne.resolve(puzzle_input)
 
 ```elixir
 defmodule PartTwo do
-  def resolve(input) do
+  def solve(input) do
     IO.puts("--- Part Two ---")
     IO.puts("Result: #{run(input)}")
   end
@@ -138,5 +138,5 @@ ExUnit.run()
 ### Solution
 
 ```elixir
-PartTwo.resolve(puzzle_input)
+PartTwo.solve(puzzle_input)
 ```
