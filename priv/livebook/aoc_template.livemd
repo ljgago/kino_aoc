@@ -21,7 +21,7 @@ Mix.install([
 
 ## Parser
 
-### Code
+### Code - Parser
 
 ```elixir
 defmodule Parser do
@@ -30,7 +30,7 @@ defmodule Parser do
 end
 ```
 
-### Tests
+### Tests - Parser
 
 ```elixir
 ExUnit.start(autorun: false)
@@ -55,7 +55,7 @@ ExUnit.run()
 
 ## Part One
 
-### Code
+### Code - Part 1
 
 ```elixir
 defmodule PartOne do
@@ -69,7 +69,7 @@ defmodule PartOne do
 end
 ```
 
-### Tests
+### Tests - Part 1
 
 ```elixir
 ExUnit.start(autorun: false)
@@ -90,7 +90,7 @@ end
 ExUnit.run()
 ```
 
-### Solution
+### Solution - Part 1
 
 ```elixir
 PartOne.solve(puzzle_input)
@@ -100,7 +100,7 @@ PartOne.solve(puzzle_input)
 
 ## Part Two
 
-### Code
+### Code - Part 2
 
 ```elixir
 defmodule PartTwo do
@@ -114,7 +114,7 @@ defmodule PartTwo do
 end
 ```
 
-### Tests
+### Tests - Part 2
 
 ```elixir
 ExUnit.start(autorun: false)
@@ -135,8 +135,10 @@ end
 ExUnit.run()
 ```
 
-### Solution
+### Solution - Part 2
 
 ```elixir
 PartTwo.solve(puzzle_input)
 ```
+
+<!-- livebook:{"offset":1948,"stamp":{"token":"XCP.fLb7e55GX2iHjR1AT_wxqZtxdhgZ_veFWSM8XmwhEoTG9MMis6JVKwhphvXPjYnk_68C7tDMaQWsEJfCNJKUND2dB5mdR6hWY7vSGSxDulim7k8XRQUS","version":2}} -->
