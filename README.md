@@ -29,7 +29,7 @@ find it with your browser inspector.
 
 ## Example template
 
-A [tamplate](priv/livebook/aoc_template.livemd) that you can use.
+A [template](priv/livebook/aoc_template.livemd) that you can use.
 
 ## License
 
