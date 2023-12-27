@@ -23,8 +23,8 @@ In `SESSION` you can configure a `secret` or set a `string` directly.
 The session id is a cookie which is set when you login to AoC. You can
 find it with your browser inspector.
 
-> **Warning** <br/>
-> The session string mode saves the content directly in the notebook. <br/>
+> **Warning** \
+> The session string mode saves the content directly in the notebook. \
 > Be careful to share it.
 
 ## Example template
