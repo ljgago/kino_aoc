@@ -7,13 +7,11 @@ defmodule KinoAOC do
 
   To bring KinoAOC to Livebook all you need to do is `Mix.install/2`:
 
-      Mix.install([
-        {:kino_aoc, "~> 0.1"}
-      ])
-
-  `force: true` does not cache data and forces the module to be downloaded,
-  without this, you must manually clear the cache to update and get the latest
-  package changes.
+  ```
+  Mix.install([
+    {:kino_aoc, "~> 0.1"}
+  ])
+  ```
 
   ## Usage
 
@@ -24,9 +22,10 @@ defmodule KinoAOC do
   The session id is a cookie which is set when you login to AoC. You can
   find it with your browser inspector.
 
-  > **Warning:**
-  > The session string mode saves the content directly in the notebook.
+  > **Warning:** \\
+  > The session string mode saves the content directly in the notebook. \\
   > Be careful to share it.
+
   """
 
   def download_puzzle(year, day, session) do
@@ -36,7 +35,7 @@ defmodule KinoAOC do
       )
 
     case res.status do
-      200 -> {:ok, String.slice(res.body, 0..-2)}
+      200 -> {:ok, String.slice(res.body, 0..-2//1)}
       _ -> raise "\nStatus: #{inspect(res.status)}\nError: #{inspect(String.trim(res.body))}"
     end
   end

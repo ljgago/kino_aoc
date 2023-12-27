@@ -2,12 +2,13 @@ defmodule KinoAOC.MixProject do
   use Mix.Project
 
   @source_url "https://github.com/ljgago/kino_aoc"
+  @version "0.1.6"
 
   def project do
     [
       # Library
       app: :kino_aoc,
-      version: "0.1.5",
+      version: @version,
 
       # Elixir
       elixir: "~> 1.13",
@@ -18,7 +19,8 @@ defmodule KinoAOC.MixProject do
       name: "KinoAOC",
       package: package(),
       description: description(),
-      source_url: @source_url
+      source_url: @source_url,
+      docs: docs()
     ]
   end
 
@@ -42,13 +44,25 @@ defmodule KinoAOC.MixProject do
   defp package() do
     [
       name: "kino_aoc",
-      files: ~w(lib .formatter.exs mix.exs README.md LICENSE),
+      formatters: ["html", "epub"],
       licenses: ["MIT"],
-      links: %{"GitHub" => @source_url}
+      links: %{"GitHub" => @source_url},
+      files: ~w(lib .formatter.exs mix.exs README.md LICENSE)
     ]
   end
 
   defp description() do
     "A helper for Advent of Code (a smart cell) for Elixir Livebook"
   end
+
+  defp docs() do
+    [
+      main: "KinoAOC",
+      name: "KinoAOC",
+      source_ref: "v#{@version}",
+      canonical: "http://hexdocs.pm/kino_aoc",
+      source_url: @source_url,
+    ]
+  end
+
 end
