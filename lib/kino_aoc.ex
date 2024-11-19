@@ -35,7 +35,7 @@ defmodule KinoAOC do
       )
 
     case res.status do
-      200 -> {:ok, String.slice(res.body, 0..-2//1)}
+      200 -> {:ok, String.trim_trailing(res.body, "\n")}
       _ -> raise "\nStatus: #{inspect(res.status)}\nError: #{inspect(String.trim(res.body))}"
     end
   end
